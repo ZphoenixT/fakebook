@@ -19,12 +19,13 @@ class User {
     get userName() {return this.#userName};
 }
 
-class Subscriber {
+class Subscriber extends User{
     #pages
     #groups
     #canMonitize
 
-    constructor(pages, groups, canMonitize) {
+    constructor(id, fullName, email, userName, pages, groups, canMonitize) {
+        super(id, fullName, email, userName);
         this.#pages = pages;
         this.#groups = groups;
         this.#canMonitize = canMonitize;
@@ -34,3 +35,12 @@ class Subscriber {
     get groups() {return this.#groups};
     get canMonitize() {return this.#canMonitize};
 }
+
+const subscrib = new Subscriber(
+    1, 
+    "Zander Toews",
+    "myrealemail@gmail.com",
+     "page 1",
+     "group1",
+     true
+    );
