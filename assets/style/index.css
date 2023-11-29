@@ -106,11 +106,11 @@ h3 {
 
 /*--------post box--------------*/
 
-/*--------DIV BOX--------- */
+    /*--------DIV BOX--------- */
 .postCreation {
     position: relative;
     height: 200px;
-    width: 800px;
+    width: 700px;
     margin-top: 35px;
     background-color: #2D343F;
     border-radius: 5px;
@@ -120,7 +120,7 @@ h3 {
     background-color: #2D343F;
     color: var(--col-white);
     border-style: none;
-    width: 772px;
+    width: 672px;
     height: 40px;
     margin: 10px 0px 10px 10px;
     padding-left: 5px;
@@ -132,7 +132,7 @@ h3 {
     left: 10px;
 }
 
-/*----------BUTTON--------*/
+    /*----------BUTTON--------*/
 .submit {
     position: absolute;
     bottom: 10px;
@@ -143,5 +143,25 @@ h3 {
     background-color: var(--col-main-blue);
 }
 
+    /*--------FILE UPLOADER----*/
+.postImg{
+    display: inline-block;
+    cursor: pointer;
+    font-size: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    color: var(--col-white);
+}
+
+.postImg input[type="file"] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    cursor: pointer;
+}
 
 /*--------End of post box-------*/
