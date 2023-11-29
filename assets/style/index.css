@@ -32,12 +32,16 @@ body {
     background-color: var(--col-dark) ;
 }
 
+.textStyle{
+    color: var(--col-white);
+}
+
 /*--------end of general--------*/
 
 /*--------header--------*/
 
 header {
-    background-color:var(--col-main-blue);
+    background-color: #2D343F;
     min-width: 100%;
     display: flex;
     overflow: hidden;
@@ -54,9 +58,12 @@ header {
 }
 
 .pageTitle{
-    width: 200px;
+    width: 210px;
     height: 55px;
-    border: 2px solid #111111;
+    color: var(--col-main-blue);
+    letter-spacing: 1px;
+    font-size: 14.3px;
+    line-height: 55px;
 }
 
 .headerPages {
@@ -64,7 +71,6 @@ header {
     justify-content: center;
     width: 450px;
     height: 55px;
-    border: 2px solid #111111;
     line-height: 55px;
     text-align: center;
 }
@@ -75,27 +81,44 @@ h3 {
 }
 
 .headerProfile{
-    width: 200px;
+    display: flex;
+    justify-content: flex-end;
+    width: 210px;
     height: 55px;
-    border: 2px solid #111111;
+    align-items: center;
+}
+
+.profile{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border: 1px solid var(--col-main-blue);
+    text-align: center;
+    line-height: 40px;
+    font-size: 25px;
+}
+
+.icon {
+    color: var(--col-white);
 }
 
 /*--------end of header-------- */
 
 /*--------post box--------------*/
 
+/*--------DIV BOX--------- */
 .postCreation {
     position: relative;
     height: 200px;
     width: 800px;
     margin-top: 35px;
-    background-color: #edeaea15;
+    background-color: #2D343F;
     border-radius: 5px;
-    border: 1px solid var(--col-black);
 }
 
 .postTxt{
-    background-color: #1b243000;
+    background-color: #2D343F;
+    color: var(--col-white);
     border-style: none;
     width: 772px;
     height: 40px;
@@ -109,12 +132,15 @@ h3 {
     left: 10px;
 }
 
+/*----------BUTTON--------*/
 .submit {
     position: absolute;
     bottom: 10px;
     right: 10px;
     height: 35px;
     width: 75px;
+    border-radius: 100px;
+    background-color: var(--col-main-blue);
 }
 
 

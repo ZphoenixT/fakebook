@@ -13,15 +13,16 @@
         <title>FakeBook</title>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
     </head>
     <body>
         <header>
             <div class="container flex head">
                 <div class="pageTitle">
-                    <h1>FakeBook</h1>
+                    <h1>The ZukBook</h1>
                 </div>
-                <div class="headerPages">
+                <div class="headerPages textStyle">
                     <h3>Friends</h3>
                     <h3>Pages</h3>
                     <h3>Groups</h3>
@@ -30,8 +31,7 @@
                 </div>
                 <div class="headerProfile">
                     <div class="profile">
-                        <p>temp text</p>
-                        <img src="" alt="profile picture">
+                        <p class="icon"><i class="fa-solid fa-user"></i></p>
                     </div>
                 </div>
             </div>
@@ -40,7 +40,9 @@
         <div class="container center">
             <div class="postCreation">
                 <input type="text" maxlength="999" class="postTxt" name="postText" placeholder="What's new insert name">
-                <input type="file" class="postImg" name="postImage">
+                <label class="postImg">
+                    <input type="file" name="postImage">
+                </label>
                 <button class="submit">Post</button>
             </div>
             <div class="postFloor">
