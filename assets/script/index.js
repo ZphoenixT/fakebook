@@ -19,7 +19,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Event listener for the profile div
     profileDiv.addEventListener('click', () => {
-        console.log('banana');
         modal.style.display = 'block';
         document.getElementById('fullName').innerText = `Name: ${subscrib.fullName}`;
         document.getElementById('userName').innerText = `User Name: ${subscrib.userName}`;
@@ -39,12 +38,4 @@ document.addEventListener("DOMContentLoaded", function() {
           modal.style.display = 'none';
         }
       });
-    });
-
-    document.addEventListener("DOMContentLoaded", function() {
-        const bananaButton = document.querySelector('submit');
-    
-        bananaButton.addEventListener('click', () => {
-            console.log('banana');
-        });
     });

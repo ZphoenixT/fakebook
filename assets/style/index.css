@@ -217,14 +217,5 @@ h3 {
   #userInfo p {
     margin-bottom: 10px;
   }
-  
-  /* Style for the Yes/No display */
-  .monetized-yes {
-    color: green;
-    font-weight: bold;
-  }
-  
-  .monetized-no {
-    color: red;
-    font-weight: bold;
-  }
+
+  /* ------------------------------------ */
