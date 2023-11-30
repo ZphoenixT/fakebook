@@ -61,17 +61,24 @@ const subscrib = new Subscriber(
         const userName = subscrib.userName;
         const currentTime = new Date();
         const textInput = document.querySelector('.postTxt').value;
-    
+
+        const imagePath = './assets/style/img/TheHappiestMan.png';
+
         const day = currentTime.getDate();
-    const year = currentTime.getFullYear();
+        const year = currentTime.getFullYear();
 
-    const options = { year: 'numeric', month: 'long', day: 'numeric' };
-    const formattedDate = currentTime.toLocaleDateString(undefined, options);
+        const options = { year: 'numeric', month: 'long', day: 'numeric' };
+        const formattedDate = currentTime.toLocaleDateString(undefined, options);
 
-    const postContent = `
-        <p class="username">${userName}</p>
-        <p class="timestamp">${formattedDate}</p>
-        <p class="text">${textInput}</p>
+        const postContent = `
+        <div class="postContent" style="display: flex; align-items: center;">
+            <img src="${imagePath}" alt="Profile Image" class="userImage" style="width: 20px; height: 20px; margin-bottom: 40px;">
+            <div class="postText" style="margin-left: 5px;">
+                <p class="username" style="margin: 0;">${userName}</p>
+                <p class="timestamp" style="margin: 0;">${formattedDate}</p>
+                <p class="text" style="margin: 10px 0 0 0;">${textInput}</p>
+            </div>
+        </div>
     `;
     
         postDiv.innerHTML = postContent;

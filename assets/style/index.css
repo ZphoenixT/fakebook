@@ -80,6 +80,11 @@ h3 {
     font-size: 15px;
 }
 
+h3:hover {
+    color: var(--col-main-blue-hover);
+    transition: all 0.3s ease-in-out;
+}
+
 .headerProfile{
     display: flex;
     justify-content: flex-end;
@@ -91,15 +96,10 @@ h3 {
 .profile{
     height: 40px;
     width: 40px;
-    border-radius: 50%;
-    border: 1px solid var(--col-main-blue);
-    text-align: center;
-    line-height: 40px;
-    font-size: 25px;
 }
 
-.icon {
-    color: var(--col-white);
+img {
+    border-radius: 50%;
 }
 
 /*--------end of header-------- */
@@ -143,6 +143,11 @@ h3 {
     background-color: var(--col-main-blue);
 }
 
+.submit:hover {
+    background-color: var(--col-main-blue-hover);
+    transition: all 0.3s ease-in-out;
+}
+
     /*--------FILE UPLOADER----*/
 .postImg{
     display: inline-block;
@@ -166,15 +171,17 @@ h3 {
 
 /*--------End of post box-------*/
 
+
+/* -------Modal------------------ */
 .modal {
-    display: none; /* Initially hidden */
+    display: none; 
     position: fixed;
     z-index: 1;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    background-color: rgba(0, 0, 0, 0.5); 
     overflow: auto;
   }
   
@@ -183,7 +190,7 @@ h3 {
     margin: 15% auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 50%; /* Adjust as needed */
+    width: 50%; 
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
@@ -218,7 +225,7 @@ h3 {
     margin-bottom: 10px;
   }
 
-  /* ------------------------------------ */
+  /* -------End of Modal------------- */
 
   .postFloor {
    margin-top: 30px;

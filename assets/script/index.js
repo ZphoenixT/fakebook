@@ -16,6 +16,9 @@ document.addEventListener("DOMContentLoaded", function() {
     const profileDiv = document.querySelector('.profile');
     const modal = document.getElementById('myModal');
     const closeBtn = document.getElementsByClassName('close')[0];
+
+    const postTextInput = document.querySelector('.postTxt');
+    postTextInput.placeholder = `What's new ${subscrib.userName}`;
     
     //profile div
     profileDiv.addEventListener('click', () => {
@@ -39,6 +42,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }
       });
 
+    //button
       const submitButton = document.querySelector('.submit');
     submitButton.addEventListener('click', () => {
         const textInput = document.querySelector('.postTxt');
