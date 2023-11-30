@@ -40,7 +40,11 @@ const subscrib = new Subscriber(
     1, 
     "Zander Toews",
     "myrealemail@gmail.com",
+    "ProgrammerGuy4326",
      "page 1",
      "group1",
      true
     );
+
+
+    export { User, Subscriber};

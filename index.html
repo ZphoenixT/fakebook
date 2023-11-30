@@ -9,7 +9,7 @@
         <!-- <link rel="icon" href="./assets/img/favicon.png" type="image/x-icon"> -->
         <link rel="stylesheet" href="./assets/style/index.css" type="text/css" media="all">
         <link rel="stylesheet" href="./assets/style/reset.css" type="text/css" media="all">
-        <script src="./assets/script/index.js" defer></script>
+        <script src="./assets/script/index.js" type="module"></script>
         <title>FakeBook</title>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -33,6 +33,19 @@
                     <div class="profile">
                         <p class="icon"><i class="fa-solid fa-user"></i></p>
                     </div>
+                    <div id="myModal" class="modal">
+                        <div class="modal-content">
+                          <span class="close">&times;</span>
+                          <div id="userInfo">
+                            <h2>User Info</h2>
+                            <p id="fullName"></p>
+                            <p id="userName"></p>
+                            <p id="email"></p>
+                            <p id="groups"></p>
+                            <p id="canMonetize"></p>
+                          </div>
+                        </div>
+                      </div>
                 </div>
             </div>
         </header>
@@ -44,7 +57,7 @@
                     <input type="file" name="postImage">
                     <i class="fa-solid fa-image"></i>
                 </label>
-                <button class="submit">Post</button>
+                <button id="bananaButton" class="submit">Post</button>
             </div>
             <div class="postFloor">
 
