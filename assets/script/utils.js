@@ -1,5 +1,7 @@
 'use strict';
 
+export { User, Subscriber, createPost};
+
 class User {
     #id;
     #fullName;
@@ -36,6 +38,7 @@ class Subscriber extends User{
     get canMonitize() {return this.#canMonitize};
 }
 
+// user info
 const subscrib = new Subscriber(
     1, 
     "Zander Toews",
@@ -47,4 +50,24 @@ const subscrib = new Subscriber(
     );
 
 
-    export { User, Subscriber};
+    //the post maker
+
+    function createPost() {
+        const postFloor = document.querySelector('.postFloor');
+    
+        const postDiv = document.createElement('div');
+        postDiv.classList.add('post');
+    
+        const userName = subscrib.userName;
+        const currentTime = new Date();
+        const textInput = document.querySelector('.postTxt').value;
+    
+        const postContent = `
+            <p class="username">${userName}</p>
+            <p class="timestamp">${currentTime.toLocaleTimeString()}, ${currentTime.toDateString()}</p>
+            <p class="text">${textInput}</p>
+        `;
+    
+        postDiv.innerHTML = postContent;
+        postFloor.appendChild(postDiv);
+    }

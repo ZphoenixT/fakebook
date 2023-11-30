@@ -1,6 +1,6 @@
 'use strict';
 
-import {User, Subscriber} from "./utils.js";
+import {User, Subscriber, createPost} from "./utils.js";
 
 const subscrib = new Subscriber(
     1, 
@@ -13,11 +13,11 @@ const subscrib = new Subscriber(
 );
 
 document.addEventListener("DOMContentLoaded", function() {
-    const profileDiv = document.querySelector('.profile'); // Selecting by class
+    const profileDiv = document.querySelector('.profile');
     const modal = document.getElementById('myModal');
     const closeBtn = document.getElementsByClassName('close')[0];
-
-    // Event listener for the profile div
+    
+    //profile div
     profileDiv.addEventListener('click', () => {
         modal.style.display = 'block';
         document.getElementById('fullName').innerText = `Name: ${subscrib.fullName}`;
@@ -27,15 +27,27 @@ document.addEventListener("DOMContentLoaded", function() {
         document.getElementById('canMonetize').innerText = `Monetized: ${subscrib.canMonitize ? 'Yes' : 'No'}`;
       });
     
-      // Event listener for closing the modal
+      //closing the modal
       closeBtn.addEventListener('click', () => {
         modal.style.display = 'none';
       });
     
-      // Clicking outside the modal closes it
+      //click outside to closes
       window.addEventListener('click', function(event) {
         if (event.target == modal) {
           modal.style.display = 'none';
         }
       });
+
+      const submitButton = document.querySelector('.submit');
+    submitButton.addEventListener('click', () => {
+        const textInput = document.querySelector('.postTxt');
+        if (textInput.value.trim() === '') {
+            textInput.focus();
+        } else {
+            createPost();
+            textInput.value = '';
+        }
+    });
+
     });
