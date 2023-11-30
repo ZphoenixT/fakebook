@@ -62,12 +62,18 @@ const subscrib = new Subscriber(
         const currentTime = new Date();
         const textInput = document.querySelector('.postTxt').value;
     
-        const postContent = `
-            <p class="username">${userName}</p>
-            <p class="timestamp">${currentTime.toLocaleTimeString()}, ${currentTime.toDateString()}</p>
-            <p class="text">${textInput}</p>
-        `;
+        const day = currentTime.getDate();
+    const year = currentTime.getFullYear();
+
+    const options = { year: 'numeric', month: 'long', day: 'numeric' };
+    const formattedDate = currentTime.toLocaleDateString(undefined, options);
+
+    const postContent = `
+        <p class="username">${userName}</p>
+        <p class="timestamp">${formattedDate}</p>
+        <p class="text">${textInput}</p>
+    `;
     
         postDiv.innerHTML = postContent;
-        postFloor.appendChild(postDiv);
+        postFloor.insertBefore(postDiv, postFloor.firstChild);
     }
